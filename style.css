@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, input, button, select, textarea {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #EFEFEF;
+}
+
+
+/*
+    Quando houver a necessidade de criar algo como uma faixa, podemos utilizar
+    o ::before, que trata-se de uma pseudo-class para criar um item 'antes'/before
+    o elemento em questão, no caso, o body
+*/
+
+body::before {
+    content: '';
+    width: 100%;
+    height: 436px;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Pra ele não ficar a frente dos elementos que serão colocados sobrepostos a ele */
+    background-color: #535971;
+}
+
+.page {
+    width: 750px;
+    margin: auto;
+}
+
+header {
+    width: 417px;
+    margin-top: 140px;   
+}
+
+header h1 {
+    font-family: 'Staatliches', sans-serif;
+    font-size: 48px;
+    color: #FFFFFF;
+    margin-bottom: 18px;
+}
+
+header p {
+    font-family: 'Poppins', sans-serif;
+    color: #FFFFFF;
+    font-size: 20px;
+}
+
+form {
+    margin-top: 58px;
+    background: #FFF;
+    border-radius: 20px 20px 0 0;
+    min-height: 300px;
+    padding: 64px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+fieldset {
+    border: none;
+}
+
+.fieldset-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 16px;
+}
+
+fieldset legend {
+    color: #535971;
+    font-family: 'Staatliches', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 34px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #E6E6F0;
+    margin-bottom: 16px;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+}
+
+.col-2 {
+    display: flex;
+    gap: 22px;
+}
+
+.input-wrapper label {
+    color: #4E4958;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 8px;
+}
+
+.input-wrapper label span {
+    color: #C1BCCC;
+    font-family: 'Poppins';
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.input-wrapper label span:hover {
+    color: #636168;
+}
+
+.input-wrapper input {
+    padding: 0 24px;
+    height: 56px;
+    font-size: 16px;
+    line-height: 26px;
+    box-sizing: border-box;
+    background: #FAFAFC;
+    border-radius: 8px;
+    border: 1px solid #E6E6F0;
+}
+
+.col-3 {
+    display: flex;
+    gap: 10px;
+}
+
+.fieldset-wrapper h2 {
+    font-size: 20px;
+    color: #535971;
+    line-height: 34px;
+}
+
+footer {
+    background: #535971;
+    border-radius: 0 0 20px 20px;
+    padding: 71px 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 417px;
+}
+
+footer .button {
+    width: 608px;
+    height: 56px;
+    background: #FF5374;
+    border-radius: 20px;
+    color: #FFF;
+    font-family: 'Staatliches', sans-serif;
+    border: none;
+    padding: 15px 40px;
+    font-weight: bold;
+    cursor: pointer;   
+}
+
+footer .button:hover {
+    background: rgb(207, 68, 96);   
+}
